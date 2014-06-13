@@ -1,0 +1,364 @@
+    <STYLE TYPE="text/css">
+        <!--
+BODY {
+    background-color: rgb(255, 255, 255);
+    font-family:monospace;
+    font-size:11px;
+}
+H1 {
+    text-align: center;
+    font-size:15px;
+}
+H2 {
+    font-size:15px;
+}
+SAMP {
+    quotes:           "'" "'";
+    font-weight:      bold;
+}
+SAMP:before {
+    content:          open-quote;
+}
+SAMP:after {
+    content:          close-quote;
+}
+CODE.file {
+    quotes:           "'" "'";
+}
+CODE.file:before {
+    content:          open-quote;
+}
+CODE.file:after {
+    content:          close-quote;
+}
+
+P.note {
+    float:            right;
+}
+P.syntax {
+    width:            auto;
+    text-align:       left;
+}
+P.caption {
+    text-align:       left;
+    font-style:       italic;
+    width:            100%;
+    background-color: rgb(211, 211, 211); /* light gray */
+}
+P.command {
+    text-align:       left;
+    width:            auto;
+/*  width:            100%; */
+    border-style:     none;
+    background-color: rgb(255, 170, 255); /* light magenta */
+}
+EM.promptinfo {
+    text-align:       left;
+    width:            auto;
+    border-style:     none;
+    background-color: rgb(0, 255, 0); /* green */
+    font-size:        80%;
+}
+P.fullpagepicture {
+    text-align:       center;
+}
+IMG.picture {
+    max-width:        1024px;
+}
+P {
+    /* text-align: justify */
+    text-align: left
+}
+P.testtime {
+    text-align:       right;
+}
+P.testsend {
+    text-align:       right;
+}
+DIV.listing {
+    width:            auto;
+    background-color: rgb(173, 216, 230); /* light blue */
+}
+DIV.object {
+    width:            auto;
+}
+TABLE.frame {
+    width:            100%;
+    border-color:     black;
+    border-style:     solid;
+    background-color: yellow;
+    border-width:     thin;
+}
+TABLE.pre {
+    width:            100%;
+/*    width:            auto; */
+    border-color:     black;
+    border-style:     solid;
+    word-wrap: break-word;
+    background-color: rgb(211, 211, 211); /* light gray */
+    border-width:     thin;
+}
+TABLE.syntax {
+    width:            100%;
+/*    width:            auto; */
+    border-color:     black;
+    border-style:     solid;
+    word-wrap: break-word;
+    background-color: rgb(170, 255, 255); /* light cyan */
+    border-width:     thin;
+}
+TABLE.figurewrapper {
+    width:            100%;
+    border-style:     none;
+}
+TABLE.figure {
+    width:            100%;
+    border-color:     black;
+    border-style:     solid;
+    background-color: rgb(211, 211, 211); /* light gray */
+    border-width:     thin;
+}
+TABLE.listing {
+/*  width:            100%; */
+    width:            auto;
+    border-color:     black;
+    border-style:     solid;
+    border-width:     thin;
+}
+TABLE.object {
+/*  width:            100%; */
+    width:            auto;
+    border-color:     green;
+    border-style:     solid;
+    border-width:     thin;
+}
+TABLE.table {
+    width:            100%;
+    border-color:     black;
+    border-style:     solid;
+    border-width:     thin;
+    background-color: rgb(190, 255, 190); /* light green */
+}
+THEAD.border {
+    background-color: rgb(224, 255, 255); /* light cyan */
+    border-color:     black;
+    border-style:     solid;
+    border-width:     thin;
+}
+THEAD.noborder {
+    background-color: rgb(224, 255, 255); /* light cyan */
+    border-color:     transparent;
+    border-style:     none;
+    border-width:     thin;
+}
+THEAD.minimalborder {
+    background-color: rgb(224, 255, 255); /* light cyan */
+    border-color:     black;
+    border-style:     solid;
+    border-width:     thin;
+}
+TBODY.border {
+    border-color:     black;
+    border-style:     solid;
+    border-width:     thin;
+}
+TBODY.noborder {
+    border-style:     none;
+}
+
+TD.border {
+    border-color:     black;
+    border-style:     solid;
+    border-width:     thin;
+}
+TR.noborder {
+    border-style:     none;
+}
+TABLE.testinfo {
+    width:            100%;
+    border-color:     black;
+    border-style:     solid;
+    border-width:     thin;
+}
+TBODY.testinfo {
+    border-style:     none;
+}
+COL.testinfolabel {
+    border-style:     none;
+    width:            300px;
+}
+COL.testinfofield {
+    border-style:     none;
+    width:            400px;
+}
+TD.testinfo {
+    border-style:     none;
+}
+STRONG.syn {
+    font-size:        100%;
+}
+STRONG.newline {
+    font-size:        100%;
+}
+SPAN.big {
+    font-size:        100%;
+}
+SPAN.small {
+    font-size:        100%;
+}
+SPAN.overline {
+    text-decoration:  overline;
+}
+SPAN.visible_label {
+    font-size:        75%;
+    font-style:       italic;
+    font-weight:      bold;
+    color:            blue;
+    border-color:     green;
+    border-style:     solid;
+    border-width:     thin;
+}
+SPAN.command {
+    background-color: rgb(255, 170, 255); /* light magenta */
+}
+SPAN.posix {
+    background-color:   yellow;
+}
+HR.object {
+    color:            green;
+}
+A.picture:hover {
+    color:            #fff;
+    background:       #fff;
+}
+A:hover {
+    color:            #000;
+}
+A:link {
+color: #666666;
+}
+P.navlinkleft {
+    width: 100%;
+    text-align: left;
+    padding: 0 0 1px 0;
+    font-size: small;
+    left: 0;
+    position: fixed;
+    top: 0;
+    margin: 0;
+}
+P.navlinkright {
+    width: 100%;
+    text-align: right;
+    padding: 0 0 1px 0;
+    font-size: small;
+    right: 0;
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+}
+A.navlink {
+    border-width:     thin;
+    border-style:     solid;
+    color:            #FFF;
+    background:       #000;
+    text-decoration:  none;
+}
+A.navlink:hover {
+    background:       #000;
+}
+SPAN.navlink {
+    border-style:     solid;
+    color:            #000;
+    border-width:     thin;
+    text-decoration:  none;
+}
+
+SPAN.navlink:hover {
+    background:       #FFF;
+}
+
+
+OBJECT.navlinkright {
+    border-style:     none;
+    display:          none;
+}
+
+P.navlinkmenu {
+    border-style:     none;
+    border-width:     thin;
+    text-align:       left;
+    padding:          0 0 1px 0;
+    font-size:        small;
+    right:            0;
+    bottom:           30px;
+    position: fixed;
+    margin:           0;
+
+}
+
+A.navlinkmenuitem {
+    border-width:     thin;
+    border-style:     none;
+    color:            #FFF;
+    text-decoration:  none;
+    text-align:       left;
+}
+
+A.navlinkmenuitem:hover {
+    background:       #FFF;
+}
+.advertisement-box-right {
+    float:            right;
+}
+.advertisement-caption-top {
+    text-align:       center;
+    font-size:        75%;
+    font-style:       italic;
+}
+        -->
+    </STYLE>
+
+<SCRIPT TYPE="text/javascript">
+<!--
+function switch_screen_width ()
+{
+     document.writeln ('<STYLE TYPE="text/css">');
+     document.write   ('    <');
+     document.writeln ('!--');
+     document.writeln ('IMG.picture {');
+     document.write   ('    max-width: ');
+     document.write   (window.screen.availWidth * 0.95);
+     document.writeln ('px');
+     document.writeln ('}');
+     document.write   ('    --');
+     document.writeln ('>');
+     document.write   ('</');
+     document.writeln ('STYLE>');
+}
+switch_screen_width ();
+//-->
+</SCRIPT>
+<SCRIPT TYPE="text/javascript">
+<!--
+function video_menu_show () {
+     document.getElementById('video_menu').style.display='block';
+}
+function video_menu_hide () {
+     document.getElementById('video_menu').style.display='none';
+}
+//-->
+</SCRIPT>
+
+
+    <LINK REL="Start" TITLE="Start" HREF="a2.htm">
+    <LINK REL="Prev" TITLE="Previous" HREF="a2345.htm">
+    <LINK REL="Next" TITLE="Next" HREF="a2347.htm">
+</HEAD>
+<BODY>
+<P CLASS="navlinkleft">
+<A CLASS="navlink" HREF="javascript:history.go(-1)">Torna indietro</A>
+<BR>
+<A CLASS="navlink" HREF="a21.htm">indice generale</A>
+</P>
+<H1>

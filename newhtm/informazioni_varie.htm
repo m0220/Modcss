@@ -1,0 +1,1266 @@
+<!DOCTYPE HTML>
+<HTML LANG="it">
+<HEAD>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <META NAME="Generator" CONTENT="Alml">
+    <META NAME="Description" CONTENT="GNU/Linux e altro software libero">
+    <META NAME="Keywords" CONTENT="Linux, GNU/Linux, Unix, software, software libero, free software, informatica, informatica libera, appunti, appunti di informatica libera">
+    <META NAME="Author" CONTENT="Daniele Giacomini &#160;&#160; appunti2@gmail.com">
+    <META NAME="Revisit-after" LANG="en" CONTENT="15 days" >
+    <META NAME="Robots" CONTENT="ALL" >
+    <META property="http://purl.org/dc/terms/format" content="text/html; charset=UTF-8">
+    <META property="http://purl.org/dc/terms/title" content="a2">
+    <META property="http://purl.org/dc/terms/creator" content="Daniele Giacomini">
+    <META property="http://purl.org/dc/terms/created" content="2013.11.11">
+    <META property="http://purl.org/dc/terms/description" content="GNU/Linux e altro software libero">
+    <META property="http://purl.org/dc/terms/subject" content="Linux, GNU/Linux, Unix, software, software libero, free software, informatica, informatica libera, appunti, appunti di informatica libera">
+    <META property="http://purl.org/dc/terms/language" content="it">
+    <TITLE>a2 --- Informazioni varie</TITLE>
+    <STYLE TYPE="text/css">
+        <!--
+BODY {
+    background-color: rgb(255, 255, 255);
+    font-family:monospace;
+    font-size:11px;
+}
+H1 {
+    text-align: center;
+    font-size:15px;
+}
+H2 {
+    font-size:15px;
+}
+SAMP {
+    quotes:           "'" "'";
+    font-weight:      bold;
+}
+SAMP:before {
+    content:          open-quote;
+}
+SAMP:after {
+    content:          close-quote;
+}
+CODE.file {
+    quotes:           "'" "'";
+}
+CODE.file:before {
+    content:          open-quote;
+}
+CODE.file:after {
+    content:          close-quote;
+}
+
+P.note {
+    float:            right;
+}
+P.syntax {
+    width:            auto;
+    text-align:       left;
+}
+P.caption {
+    text-align:       left;
+    font-style:       italic;
+    width:            100%;
+    background-color: rgb(211, 211, 211); /* light gray */
+}
+P.command {
+    text-align:       left;
+    width:            auto;
+/*  width:            100%; */
+    border-style:     none;
+    background-color: rgb(255, 170, 255); /* light magenta */
+}
+EM.promptinfo {
+    text-align:       left;
+    width:            auto;
+    border-style:     none;
+    background-color: rgb(0, 255, 0); /* green */
+    font-size:        80%;
+}
+P.fullpagepicture {
+    text-align:       center;
+}
+IMG.picture {
+    max-width:        1024px;
+}
+P {
+    /* text-align: justify */
+    text-align: left
+}
+P.testtime {
+    text-align:       right;
+}
+P.testsend {
+    text-align:       right;
+}
+DIV.listing {
+    width:            auto;
+    background-color: rgb(173, 216, 230); /* light blue */
+}
+DIV.object {
+    width:            auto;
+}
+TABLE.frame {
+    width:            100%;
+    border-color:     black;
+    border-style:     solid;
+    background-color: yellow;
+    border-width:     thin;
+}
+TABLE.pre {
+    width:            100%;
+/*    width:            auto; */
+    border-color:     black;
+    border-style:     solid;
+    word-wrap: break-word;
+    background-color: rgb(211, 211, 211); /* light gray */
+    border-width:     thin;
+}
+TABLE.syntax {
+    width:            100%;
+/*    width:            auto; */
+    border-color:     black;
+    border-style:     solid;
+    word-wrap: break-word;
+    background-color: rgb(170, 255, 255); /* light cyan */
+    border-width:     thin;
+}
+TABLE.figurewrapper {
+    width:            100%;
+    border-style:     none;
+}
+TABLE.figure {
+    width:            100%;
+    border-color:     black;
+    border-style:     solid;
+    background-color: rgb(211, 211, 211); /* light gray */
+    border-width:     thin;
+}
+TABLE.listing {
+/*  width:            100%; */
+    width:            auto;
+    border-color:     black;
+    border-style:     solid;
+    border-width:     thin;
+}
+TABLE.object {
+/*  width:            100%; */
+    width:            auto;
+    border-color:     green;
+    border-style:     solid;
+    border-width:     thin;
+}
+TABLE.table {
+    width:            100%;
+    border-color:     black;
+    border-style:     solid;
+    border-width:     thin;
+    background-color: rgb(190, 255, 190); /* light green */
+}
+THEAD.border {
+    background-color: rgb(224, 255, 255); /* light cyan */
+    border-color:     black;
+    border-style:     solid;
+    border-width:     thin;
+}
+THEAD.noborder {
+    background-color: rgb(224, 255, 255); /* light cyan */
+    border-color:     transparent;
+    border-style:     none;
+    border-width:     thin;
+}
+THEAD.minimalborder {
+    background-color: rgb(224, 255, 255); /* light cyan */
+    border-color:     black;
+    border-style:     solid;
+    border-width:     thin;
+}
+TBODY.border {
+    border-color:     black;
+    border-style:     solid;
+    border-width:     thin;
+}
+TBODY.noborder {
+    border-style:     none;
+}
+
+TD.border {
+    border-color:     black;
+    border-style:     solid;
+    border-width:     thin;
+}
+TR.noborder {
+    border-style:     none;
+}
+TABLE.testinfo {
+    width:            100%;
+    border-color:     black;
+    border-style:     solid;
+    border-width:     thin;
+}
+TBODY.testinfo {
+    border-style:     none;
+}
+COL.testinfolabel {
+    border-style:     none;
+    width:            300px;
+}
+COL.testinfofield {
+    border-style:     none;
+    width:            400px;
+}
+TD.testinfo {
+    border-style:     none;
+}
+STRONG.syn {
+    font-size:        100%;
+}
+STRONG.newline {
+    font-size:        100%;
+}
+SPAN.big {
+    font-size:        100%;
+}
+SPAN.small {
+    font-size:        100%;
+}
+SPAN.overline {
+    text-decoration:  overline;
+}
+SPAN.visible_label {
+    font-size:        75%;
+    font-style:       italic;
+    font-weight:      bold;
+    color:            blue;
+    border-color:     green;
+    border-style:     solid;
+    border-width:     thin;
+}
+SPAN.command {
+    background-color: rgb(255, 170, 255); /* light magenta */
+}
+SPAN.posix {
+    background-color:   yellow;
+}
+HR.object {
+    color:            green;
+}
+A.picture:hover {
+    color:            #fff;
+    background:       #fff;
+}
+A:hover {
+    color:            #000;
+}
+A:link {
+color: #666666;
+}
+P.navlinkleft {
+    width: 100%;
+    text-align: left;
+    padding: 0 0 1px 0;
+    font-size: small;
+    left: 0;
+    position: fixed;
+    top: 0;
+    margin: 0;
+}
+P.navlinkright {
+    width: 100%;
+    text-align: right;
+    padding: 0 0 1px 0;
+    font-size: small;
+    right: 0;
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+}
+A.navlink {
+    border-width:     thin;
+    border-style:     solid;
+    color:            #FFF;
+    background:       #000;
+    text-decoration:  none;
+}
+A.navlink:hover {
+    background:       #000;
+}
+SPAN.navlink {
+    border-style:     solid;
+    color:            #000;
+    border-width:     thin;
+    text-decoration:  none;
+}
+
+SPAN.navlink:hover {
+    background:       #FFF;
+}
+
+
+OBJECT.navlinkright {
+    border-style:     none;
+    display:          none;
+}
+
+P.navlinkmenu {
+    border-style:     none;
+    border-width:     thin;
+    text-align:       left;
+    padding:          0 0 1px 0;
+    font-size:        small;
+    right:            0;
+    bottom:           30px;
+    position: fixed;
+    margin:           0;
+
+}
+
+A.navlinkmenuitem {
+    border-width:     thin;
+    border-style:     none;
+    color:            #FFF;
+    text-decoration:  none;
+    text-align:       left;
+}
+
+A.navlinkmenuitem:hover {
+    background:       #FFF;
+}
+.advertisement-box-right {
+    float:            right;
+}
+.advertisement-caption-top {
+    text-align:       center;
+    font-size:        75%;
+    font-style:       italic;
+}
+        -->
+    </STYLE>
+
+<SCRIPT TYPE="text/javascript">
+<!--
+function switch_screen_width ()
+{
+     document.writeln ('<STYLE TYPE="text/css">');
+     document.write   ('    <');
+     document.writeln ('!--');
+     document.writeln ('IMG.picture {');
+     document.write   ('    max-width: ');
+     document.write   (window.screen.availWidth * 0.95);
+     document.writeln ('px');
+     document.writeln ('}');
+     document.write   ('    --');
+     document.writeln ('>');
+     document.write   ('</');
+     document.writeln ('STYLE>');
+}
+switch_screen_width ();
+//-->
+</SCRIPT>
+<SCRIPT TYPE="text/javascript">
+<!--
+function video_menu_show () {
+     document.getElementById('video_menu').style.display='block';
+}
+function video_menu_hide () {
+     document.getElementById('video_menu').style.display='none';
+}
+//-->
+</SCRIPT>
+
+
+    <LINK REL="Start" TITLE="Start" HREF="a2.htm">
+    <LINK REL="Prev" TITLE="Previous" HREF="a2345.htm">
+    <LINK REL="Next" TITLE="Next" HREF="a2347.htm">
+</HEAD>
+<BODY>
+<P CLASS="navlinkleft">
+<A CLASS="navlink" HREF="javascript:history.go(-1)">Torna indietro</A>
+<BR>
+<A CLASS="navlink" HREF="a21.htm">indice generale</A>
+</P>
+<H1>
+Capitolo 12. &nbsp; <SPAN ID="almltitle495"></SPAN><SPAN ID="almlanchor1224"></SPAN> Informazioni varie </H1>
+
+<UL>
+<LI><P><A HREF="a223.htm#almltitle496">12.1 &nbsp;  Pacchetto Procinfo   </A>
+</P>
+<UL>
+<LI><P><A HREF="a223.htm#almltitle497">12.1.1 &nbsp;  Utilizzo di &#171;procinfo&#187;   </A>
+</P>
+<LI><P><A HREF="a223.htm#almltitle498">12.1.2 &nbsp;  Utilizzo di &#171;lsdev&#187;   </A>
+</P>
+<LI><P><A HREF="a223.htm#almltitle499">12.1.3 &nbsp;  Utilizzo di &#171;socklist&#187;   </A>
+</P>
+</UL>
+<LI><P><A HREF="a223.htm#almltitle500">12.2 &nbsp;  Pacchetto Linux&#160;PCI&#160;utilities   </A>
+</P>
+<LI><P><A HREF="a223.htm#almltitle501">12.3 &nbsp;  Lsusb   </A>
+</P>
+<LI><P><A HREF="a223.htm#almltitle502">12.4 &nbsp;  Lshw   </A>
+</P>
+<LI><P><A HREF="a223.htm#almltitle503">12.5 &nbsp;  Definizione del nome del sistema       </A>
+</P>
+<LI><P><A HREF="a223.htm#almltitle504">12.6 &nbsp;  Altre caratteristiche identificative del sistema   </A>
+</P>
+<LI><P><A HREF="a223.htm#almltitle505">12.7 &nbsp;  Numero di serie   </A>
+</P>
+<LI><P><A HREF="a223.htm#almltitle506">12.8 &nbsp;  LinuxInfo  </A>
+</P>
+</UL>
+
+<P>
+
+<CODE>$HOSTNAME</CODE> <A HREF="a223.htm#almlindex765">12.5</A>
+
+<CODE>hostid</CODE> <A HREF="a223.htm#almlindex770">12.7</A>
+
+<CODE>hostname</CODE> <A HREF="a223.htm#almlindex764">12.5</A> <A HREF="a223.htm#almlindex766">12.5</A>
+
+<CODE>lsdev</CODE> <A HREF="a223.htm#almlindex752">12.1.2</A>
+
+<CODE>lshw</CODE> <A HREF="a223.htm#almlindex760">12.4</A>
+
+<CODE>lspci</CODE> <A HREF="a223.htm#almlindex756">12.2</A>
+
+<CODE>lssub</CODE> <A HREF="a223.htm#almlindex758">12.3</A>
+
+procinfo<CODE>pcal</CODE> <A HREF="a223.htm#almlindex749">12.1.1</A>
+
+<CODE>socklist</CODE> <A HREF="a223.htm#almlindex754">12.1.3</A>
+
+<CODE>uname</CODE> <A HREF="a223.htm#almlindex768">12.6</A>
+</P>
+
+<P>In questo capitolo si descrivono sommariamente alcuni programmi che forniscono delle informazioni varie sul sistema in funzione, non avendo trovato una collocazione pi&#249; specifica nella trattazione di altri argomenti.</P>
+
+<H2>12.1 &nbsp; <SPAN ID="almltitle496"></SPAN><SPAN ID="almlanchor1225"></SPAN>
+ Pacchetto Procinfo <SPAN ID="almlindex746"></SPAN> <SPAN ID="almlindex747"></SPAN> </H2>
+
+<P>La quantit&#224; di informazioni disponibili all&#x0027;interno di <CODE CLASS="file">/proc/</CODE> &#232; enorme; inoltre, con l&#x0027;evolversi dei kernel cambiano i contenuti dei file virtuali e anche la loro collocazione. A questo proposito sono utili i programmi del pacchetto Procinfo<SPAN ID="almlwork53"></SPAN><SUP><A HREF="#almlfootnote1" NAME="almlfootnote-ref1">(1)</A></SUP> che aiutano ad analizzare tali informazioni per generare dei resoconti e delle statistiche pi&#249; facili da consultare.</P>
+
+<H3>12.1.1 &nbsp; <SPAN ID="almltitle497"></SPAN><SPAN ID="almlanchor1226"></SPAN>
+ Utilizzo di &#171;procinfo&#187; <SPAN ID="almlindex748"></SPAN> <SPAN ID="almlindex749"></SPAN> </H3>
+
+<P>Il programma <SAMP>procinfo</SAMP> &#232; quello che, dal pacchetto omonimo, d&#224; le informazioni pi&#249; comuni sulla gestione dei processi di un sistema GNU/Linux. I dati vengono visualizzati in forma pi&#249; o meno tabellare e i campi sono indicati attraverso dei nomi. Il significato di alcuni di questi &#232; descritto nella tabella <A HREF="a223.htm#almlanchor1227">12.1</A>.</P>
+
+<TABLE CLASS="syntax">
+<TBODY><TR><TD>
+
+<PRE>procinfo <STRONG CLASS="syn">[</STRONG><VAR>opzioni</VAR><STRONG CLASS="syn">]</STRONG>
+</PRE>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<TABLE ID="almlanchor1227">
+<TBODY><TR><TD>
+
+<P CLASS="caption"> Tabella <A HREF="a223.htm#almlanchor1227">12.1</A>. Alcuni dei nomi utilizzati per descrivere i campi delle tabelle generate da <SAMP>procinfo</SAMP>. </P>
+<DIV CLASS="object">
+<TABLE CLASS="table">
+
+<COLGROUP><COL CLASS="widthpixel616"><COL CLASS="widthpixel998"></COLGROUP>
+
+<THEAD CLASS="border">
+<TR><TD CLASS="border">Nome </TD><TD CLASS="border">Descrizione </TD></TR>
+</THEAD>
+<TBODY CLASS="border">
+<TR><TD CLASS="border">Memory: </TD><TD CLASS="border">Utilizzo della memoria. </TD></TR>
+<TR><TD CLASS="border">Bootup: </TD><TD CLASS="border">Data e ora dell&#x0027;avvio del sistema. </TD></TR>
+<TR><TD CLASS="border">Load average: </TD><TD CLASS="border">Carico medio. </TD></TR>
+<TR><TD CLASS="border">user: </TD><TD CLASS="border">Tempo per i processi avviati dagli utenti. </TD></TR>
+<TR><TD CLASS="border">nice: </TD><TD CLASS="border">Tempo per i processi avviati con un valore <SPAN ID="almlindex750"></SPAN>nice. </TD></TR>
+<TR><TD CLASS="border">system: </TD><TD CLASS="border">Tempo per i processi avviati dal kernel. </TD></TR>
+<TR><TD CLASS="border">idle: </TD><TD CLASS="border">Tempo non utilizzato. </TD></TR>
+<TR><TD CLASS="border">uptime: </TD><TD CLASS="border">Tempo complessivo di funzionamento. </TD></TR>
+<TR><TD CLASS="border">irq <VAR>n</VAR>: </TD><TD CLASS="border">Numero di interruzioni e dispositivo corrispondente. </TD></TR>
+<TR><TD CLASS="border">Modules: </TD><TD CLASS="border">Moduli del kernel installati. </TD></TR>
+<TR><TD CLASS="border">Character Devices: </TD><TD CLASS="border">Elenco dei dispositivi a caratteri. </TD></TR>
+<TR><TD CLASS="border">Block Devices: </TD><TD CLASS="border">Elenco dei dispositivi a blocchi. </TD></TR>
+<TR><TD CLASS="border">File Systems: </TD><TD CLASS="border">Tipi di file&#160;system gestibili. </TD></TR>
+</TBODY>
+</TABLE>
+</DIV>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<P>Quando <SAMP>procinfo</SAMP> viene utilizzato senza argomenti si ottengono le informazioni pi&#249; importanti che possono essere visualizzate su uno schermo normale, per esempio ci&#242; che viene mostrato di seguito:</P>
+
+<TABLE ID="almlanchor1228">
+<TBODY><TR><TD>
+<DIV CLASS="object">
+
+<TABLE CLASS="pre">
+<TBODY><TR><TD>
+
+<PRE>Linux 2.6.14.3 (root@nanohost) (gcc 4.0.2 ) #1 1CPU [nanohost]
+
+Memory:      Total        Used        Free      Shared     Buffers      
+Mem:        513468      120976      392492           0       21008
+Swap:      5462092           0     5462092
+
+Bootup: Fri Feb 24 08:15:09 2006  Load average: 0.03 0.01 0.00 1/62 7861
+
+user  :  0:00:35.80   0.3%  page in :    21573  disk 1:      105r     0w
+nice  :  0:00:00.00   0.0%  page out:        0
+system:  0:00:38.61   0.3%  page act:    10203
+IOwait:  0:02:08.19   0.9%  page dea:        0
+hw irq:  0:00:00.82   0.0%  page flt:  1679805
+sw irq:  0:00:04.65   0.0%  swap in :        0
+idle  :  3:44:32.08  98.5%  swap out:        0
+uptime:  3:48:01.64         context :   535302
+
+irq  0:   3419830 timer           irq 12:     95199 i8042                
+irq  1:      8465 i8042           irq 14:      2192 ide0                 
+irq  2:         0 cascade [4]     irq 15:     15393 ide1                 
+irq  3:         3                 irq 17:         0 Intel 82801BA-ICH2   
+irq  4:         3                 irq 18:     81824 eth0                 
+irq  6:         9                 irq 19:         0 uhci_hcd:usb1        
+irq  8:         5 rtc             irq 23:         0 uhci_hcd:usb2        
+</PRE>
+
+</TD></TR></TBODY>
+</TABLE>
+</DIV>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<P>Eventualmente, <SAMP>procinfo</SAMP> pu&#242; essere utilizzato per ottenere un&#x0027;informazione continua (o quasi), come fa il programma <SAMP>top</SAMP>. In questo senso pu&#242; essere stabilita una pausa tra un aggiornamento e il successivo. Durante questo funzionamento continuo, si possono utilizzare alcuni comandi interattivi, composti da una lettera singola, il cui significato tende a essere coerente con quello delle opzioni della riga di comando. In modo particolare, il comando <SAMP>q</SAMP> termina il funzionamento continuo di <SAMP>procinfo</SAMP>.</P>
+
+<TABLE ID="almlanchor1229">
+<TBODY><TR><TD>
+
+<P CLASS="caption"> Tabella <A HREF="a223.htm#almlanchor1229">12.3</A>. Alcune opzioni. </P>
+<DIV CLASS="object">
+<TABLE CLASS="table">
+
+<COLGROUP><COL CLASS="widthpixel616"><COL CLASS="widthpixel998"></COLGROUP>
+
+<THEAD CLASS="border">
+<TR><TD CLASS="border">Sintassi </TD><TD CLASS="border">Descrizione </TD></TR>
+</THEAD>
+<TBODY CLASS="border">
+<TR><TD CLASS="border">
+<PRE>-f
+</PRE>
+ </TD><TD CLASS="border">Fa s&#236; che <SAMP>procinfo</SAMP> funzioni in modo continuo, a tutto-schermo. </TD></TR>
+<TR><TD CLASS="border">
+<PRE>-n<VAR>n_secondi</VAR>
+</PRE>
+ </TD><TD CLASS="border">Questa opzione implica automaticamente la selezione di <SAMP>-f</SAMP> e serve a stabilire un intervallo tra un aggiornamento e l&#x0027;altro delle informazioni visualizzate. </TD></TR>
+<TR><TD CLASS="border">
+<PRE>-m
+</PRE>
+ </TD><TD CLASS="border">Mostra le informazioni sui moduli e sui dispositivi a caratteri e a blocchi, trascurando i dati relativi alla CPU e alla memoria. </TD></TR>
+<TR><TD CLASS="border">
+<PRE>-a
+</PRE>
+ </TD><TD CLASS="border">Mostra tutte le informazioni disponibili, ma per questo non bastano le dimensioni di uno schermo normale. </TD></TR>
+<TR><TD CLASS="border">
+<PRE>-d
+</PRE>
+ </TD><TD CLASS="border">Mostra le informazioni normali, cio&#232; quelle sull&#x0027;utilizzo della CPU, della memoria e delle interruzioni (<!--INDEXENTRYREMOVE--><EM><!--INDEXENTRYREMOVE-->interrupt<!--INDEXENTRYREMOVE--></EM><!--INDEXENTRYREMOVE-->), ma riferite a periodi di un secondo. Ci&#242; richiede il funzionamento di <SAMP>procinfo</SAMP> in modo continuo, pertanto questa opzione implica automaticamente l&#x0027;uso di <SAMP>-f</SAMP>. </TD></TR>
+<TR><TD CLASS="border">
+<PRE>-F<VAR>file</VAR>
+</PRE>
+ </TD><TD CLASS="border">Ridirige l&#x0027;output in un file, che di solito corrisponde al dispositivo di una console virtuale inutilizzata. </TD></TR>
+</TBODY>
+</TABLE>
+</DIV>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<H3>12.1.2 &nbsp; <SPAN ID="almltitle498"></SPAN><SPAN ID="almlanchor1230"></SPAN>
+ Utilizzo di &#171;lsdev&#187; <SPAN ID="almlindex751"></SPAN> <SPAN ID="almlindex752"></SPAN> </H3>
+
+<P>Il programma <SAMP>lsdev</SAMP> si limita a mostrare una tabella con informazioni tratte dai file <CODE CLASS="file">/proc/interrupts</CODE>, <CODE CLASS="file">/proc/ioports</CODE> e <CODE CLASS="file">/proc/dma</CODE>. In pratica mostra tutti gli indirizzi relativi all&#x0027;hardware installato.</P>
+
+<TABLE CLASS="syntax">
+<TBODY><TR><TD>
+
+<PRE>lsdev
+</PRE>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<P>Il risultato che si ottiene potrebbe essere simile a quello seguente:</P>
+
+<TABLE ID="almlanchor1231">
+<TBODY><TR><TD>
+<DIV CLASS="object">
+
+<TABLE CLASS="pre">
+<TBODY><TR><TD>
+
+<PRE>Device            DMA   IRQ  I/O Ports
+------------------------------------------------
+                      0 1 2 4 9 12 13 14 15 
+cascade             4       
+dma                          0080-008f
+dma1                         0000-001f
+dma2                         00c0-00df
+eth0                         ff80-ff9f
+fdomain                      ffa0-ffaf
+fpu                          00f0-00ff
+ide0                         01f0-01f7 03f6-03f6 8000-8007
+ide1                         0170-0177 0376-0376 8008-800f
+keyboard                     0060-006f
+parport0                     0378-037a
+pic1                         0020-003f
+pic2                         00a0-00bf
+serial                       02f8-02ff 03f8-03ff
+timer                        0040-005f
+vga+                         03c0-03df
+</PRE>
+
+</TD></TR></TBODY>
+</TABLE>
+</DIV>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<H3>12.1.3 &nbsp; <SPAN ID="almltitle499"></SPAN><SPAN ID="almlanchor1232"></SPAN>
+ Utilizzo di &#171;socklist&#187; <SPAN ID="almlindex753"></SPAN> <SPAN ID="almlindex754"></SPAN> </H3>
+
+<P>Il programma <SAMP>socklist</SAMP> si limita a mostrare una tabella con informazioni tratte dai file <CODE CLASS="file">/proc/net/tcp</CODE>, <CODE CLASS="file">/proc/net/udp</CODE> e <CODE CLASS="file">/proc/net/raw</CODE>, integrandoli con le informazioni relative ai descrittori dei file di ogni processo, ovvero <CODE CLASS="file">/proc/<STRONG CLASS="syn">*</STRONG>/fd/<STRONG CLASS="syn">*</STRONG></CODE>.</P>
+
+<TABLE CLASS="syntax">
+<TBODY><TR><TD>
+
+<PRE>socklist
+</PRE>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<P>Si tratta di informazioni utili per ci&#242; che riguarda la gestione della rete, tuttavia questo programma viene mostrato qui per completare l&#x0027;argomento del capitolo. Di seguito viene mostrato un esempio del risultato che si pu&#242; ottenere con <SAMP>socklist</SAMP>.</P>
+
+<TABLE ID="almlanchor1233">
+<TBODY><TR><TD>
+<DIV CLASS="object">
+
+<TABLE CLASS="pre">
+<TBODY><TR><TD>
+
+<PRE>type  port      inode     uid    pid   fd  name
+tcp     80        246       0      0    0  
+tcp   8080        245       0      0    0  
+tcp     25        230       0      0    0  
+tcp   2049        215       0      0    0  
+tcp    515        205       0      0    0  
+tcp    635        195       0      0    0  
+tcp     53        169       0      0    0  
+tcp     53        167       0      0    0  
+tcp     98        156       0      0    0  
+tcp    113        155       0      0    0  
+tcp     37        153       0      0    0  
+tcp     79        152       0      0    0  
+tcp    143        151       0      0    0  
+tcp    110        150       0      0    0  
+tcp    109        149       0      0    0  
+tcp    513        146       0      0    0  
+tcp    514        145       0      0    0  
+tcp     70        144       0      0    0  
+tcp     23        143       0      0    0  
+tcp     21        142       0      0    0  
+tcp    111        106       0      0    0  
+udp   2049        212       0      0    0  
+udp    635        190       0      0    0  
+udp   1024        170       0      0    0  
+udp     53        168       0      0    0  
+udp     53        166       0      0    0  
+udp     37        154       0      0    0  
+udp    518        148       0      0    0  
+udp    517        147       0      0    0  
+udp    514        115       0      0    0  
+udp    111        105       0      0    0  
+raw      1          0       0      0    0  
+raw      6          0       0      0    0  
+</PRE>
+
+</TD></TR></TBODY>
+</TABLE>
+</DIV>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<H2>12.2 &nbsp; <SPAN ID="almltitle500"></SPAN><SPAN ID="almlanchor1234"></SPAN>
+ Pacchetto Linux&#160;PCI&#160;utilities <SPAN ID="almlindex755"></SPAN> <SPAN ID="almlindex756"></SPAN> </H2>
+
+<P>Il pacchetto Linux&#160;PCI&#160;utilities contiene in particolare il programma <SAMP>lspci</SAMP><SPAN ID="almlwork54"></SPAN><SUP><A HREF="#almlfootnote2" NAME="almlfootnote-ref2">(2)</A></SUP> con il quale &#232; possibile conoscere tutte le informazioni disponibili sul bus PCI:</P>
+
+<TABLE CLASS="syntax">
+<TBODY><TR><TD>
+
+<PRE>lspci <STRONG CLASS="syn">[</STRONG><VAR>opzioni</VAR><STRONG CLASS="syn">]</STRONG>
+</PRE>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<P>Attraverso le opzioni &#232; possibile avere una rappresentazione diversa delle informazioni, ma nella maggior parte dei casi &#232; sufficiente l&#x0027;utilizzo di <SAMP>lspci</SAMP> senza argomenti:</P>
+
+<P CLASS="command"><CODE>$&#160;</CODE><STRONG><CODE>lspci</CODE></STRONG><!--INDEXENTRYREMOVE-->[<KBD><!--INDEXENTRYREMOVE-->Invio<!--INDEXENTRYREMOVE--></KBD>]<!--INDEXENTRYREMOVE--></P>
+
+<TABLE ID="almlanchor1235">
+<TBODY><TR><TD>
+<DIV CLASS="object">
+
+<PRE>00:00.0 Host bridge: VIA Technologies, Inc. VT82C693A/694x <STRONG CLASS="newline">\</STRONG><BR>&nbsp;&nbsp;<STRONG CLASS="newline">\</STRONG>[Apollo PRO133x] (rev 44)
+00:01.0 PCI bridge: VIA Technologies, Inc. VT82C598/694x <STRONG CLASS="newline">\</STRONG><BR>&nbsp;&nbsp;<STRONG CLASS="newline">\</STRONG>[Apollo MVP3/Pro133x AGP]
+00:07.0 ISA bridge: VIA Technologies, Inc. VT82C596 ISA [Mobile South] (rev 23)
+00:07.1 IDE interface: VIA Technologies, Inc. <STRONG CLASS="newline">\</STRONG><BR>&nbsp;&nbsp;<STRONG CLASS="newline">\</STRONG>VT82C586A/B/VT82C686/A/B/VT8233/A/C/VT8235 PIPC Bus Master IDE (rev 10)
+00:07.2 USB Controller: VIA Technologies, Inc. USB (rev 11)
+00:07.3 Host bridge: VIA Technologies, Inc. VT82C596 Power Management (rev 30)
+00:11.0 Ethernet controller: VIA Technologies, Inc. VT6102 [Rhine-II] (rev 42)
+00:12.0 VGA compatible controller: S3 Inc. ViRGE/DX or /GX (rev 01)
+00:13.0 Multimedia audio controller: Creative Labs SB Live! EMU10k1 (rev 08)
+00:13.1 Input device controller: Creative Labs SB Live! MIDI/Game Port (rev 08)
+00:14.0 SCSI storage controller: Adaptec AIC-7861 (rev 01)
+</PRE>
+</DIV>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<P>Eventualmente basta l&#x0027;opzione <SAMP>-v</SAMP> per ottenere maggiori informazioni:</P>
+
+<P CLASS="command"><CODE>$&#160;</CODE><STRONG><CODE>lspci -v</CODE></STRONG><!--INDEXENTRYREMOVE-->[<KBD><!--INDEXENTRYREMOVE-->Invio<!--INDEXENTRYREMOVE--></KBD>]<!--INDEXENTRYREMOVE--></P>
+
+<TABLE ID="almlanchor1236">
+<TBODY><TR><TD>
+<DIV CLASS="object">
+
+<PRE>00:00.0 Host bridge: VIA Technologies, Inc. VT82C693A/694x <STRONG CLASS="newline">\</STRONG><BR>&nbsp;&nbsp;<STRONG CLASS="newline">\</STRONG>[Apollo PRO133x] (rev 44)
+        Flags: bus master, medium devsel, latency 0
+        Memory at d0000000 (32-bit, prefetchable) [size=64M]
+        Capabilities: &lt;available only to root&gt;
+
+00:01.0 PCI bridge: VIA Technologies, Inc. VT82C598/694x <STRONG CLASS="newline">\</STRONG><BR>&nbsp;&nbsp;<STRONG CLASS="newline">\</STRONG>[Apollo MVP3/Pro133x AGP] (prog-if 00 [Normal decode])
+        Flags: bus master, 66Mhz, medium devsel, latency 0
+        Bus: primary=00, secondary=01, subordinate=01, sec-latency=0
+        Capabilities: &lt;available only to root&gt;
+
+00:07.0 ISA bridge: VIA Technologies, Inc. VT82C596 ISA [Mobile South] (rev 23)
+        Subsystem: VIA Technologies, Inc. VT82C596/A/B PCI to ISA Bridge
+        Flags: bus master, stepping, medium devsel, latency 0
+
+00:07.1 IDE interface: VIA Technologies, Inc. <STRONG CLASS="newline">\</STRONG><BR>&nbsp;&nbsp;<STRONG CLASS="newline">\</STRONG>VT82C586A/B/VT82C686/A/B/VT8233/A/C/VT8235 PIPC Bus Master IDE <STRONG CLASS="newline">\</STRONG><BR>&nbsp;&nbsp;<STRONG CLASS="newline">\</STRONG>(rev 10) (prog-if 8a [Master SecP PriP])
+        Flags: bus master, medium devsel, latency 32
+        I/O ports at d000 [size=16]
+        Capabilities: &lt;available only to root&gt;
+
+00:07.2 USB Controller: VIA Technologies, Inc. USB (rev 11) (prog-if 00 [UHCI])
+        Subsystem: VIA Technologies, Inc. (Wrong ID) USB Controller
+        Flags: bus master, medium devsel, latency 32, IRQ 11
+        I/O ports at d400 [size=32]
+        Capabilities: &lt;available only to root&gt;
+
+00:07.3 Host bridge: VIA Technologies, Inc. VT82C596 Power Management (rev 30)
+        Flags: medium devsel
+
+00:11.0 Ethernet controller: VIA Technologies, Inc. VT6102 [Rhine-II] (rev 42)
+        Subsystem: D-Link System Inc DFE-530TX rev A
+        Flags: bus master, medium devsel, latency 32, IRQ 11
+        I/O ports at d800 [size=256]
+        Memory at d9000000 (32-bit, non-prefetchable) [size=256]
+        Expansion ROM at &lt;unassigned&gt; [disabled] [size=64K]
+        Capabilities: &lt;available only to root&gt;
+
+00:12.0 VGA compatible controller: S3 Inc. ViRGE/DX or /GX <STRONG CLASS="newline">\</STRONG><BR>&nbsp;&nbsp;<STRONG CLASS="newline">\</STRONG>(rev 01) (prog-if 00 [VGA])
+        Subsystem: S3 Inc. ViRGE/DX
+        Flags: bus master, medium devsel, latency 32, IRQ 9
+        Memory at d4000000 (32-bit, non-prefetchable) [size=64M]
+        Expansion ROM at &lt;unassigned&gt; [disabled] [size=64K]
+
+00:13.0 Multimedia audio controller: Creative Labs SB Live! EMU10k1 (rev 08)
+        Subsystem: Creative Labs CT4832 SBLive! Value
+        Flags: bus master, medium devsel, latency 32, IRQ 5
+        I/O ports at dc00 [size=32]
+        Capabilities: &lt;available only to root&gt;
+
+00:13.1 Input device controller: Creative Labs SB Live! MIDI/Game Port (rev 08)
+        Subsystem: Creative Labs Gameport Joystick
+        Flags: bus master, medium devsel, latency 32
+        I/O ports at e000 [size=8]
+        Capabilities: &lt;available only to root&gt;
+
+00:14.0 SCSI storage controller: Adaptec AIC-7861 (rev 01)
+        Flags: bus master, medium devsel, latency 32, IRQ 10
+        I/O ports at e400 [disabled] [size=256]
+        Memory at d9001000 (32-bit, non-prefetchable) [size=4K]
+        Expansion ROM at &lt;unassigned&gt; [disabled] [size=64K]
+</PRE>
+</DIV>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<H2>12.3 &nbsp; <SPAN ID="almltitle501"></SPAN><SPAN ID="almlanchor1237"></SPAN>
+ Lsusb <SPAN ID="almlindex757"></SPAN> <SPAN ID="almlindex758"></SPAN> </H2>
+
+<P>Lsusb<SPAN ID="almlwork55"></SPAN><SUP><A HREF="#almlfootnote3" NAME="almlfootnote-ref3">(3)</A></SUP> &#232; un programma che fa parte del pacchetto USButils, con lo scopo di elencare i dispositivi USB presenti. Si pu&#242; usare con delle opzioni, in mancanza delle quali mostra l&#x0027;elenco completo dei componenti:</P>
+
+<TABLE CLASS="syntax">
+<TBODY><TR><TD>
+
+<PRE>lsusb <STRONG CLASS="syn">[</STRONG><VAR>opzioni</VAR><STRONG CLASS="syn">]</STRONG>
+</PRE>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<P>Ecco come potrebbe presentarsi l&#x0027;elenco che si ottiene da questo programma:</P>
+
+<P CLASS="command"><CODE>$&#160;</CODE><STRONG><CODE>lsusb</CODE></STRONG><!--INDEXENTRYREMOVE-->[<KBD><!--INDEXENTRYREMOVE-->Invio<!--INDEXENTRYREMOVE--></KBD>]<!--INDEXENTRYREMOVE--></P>
+
+<TABLE ID="almlanchor1238">
+<TBODY><TR><TD>
+<DIV CLASS="object">
+
+<PRE>Bus 001 Device 003: ID 067b:2517 Prolific Technology, Inc. <STRONG CLASS="newline">\</STRONG><BR>&nbsp;&nbsp;<STRONG CLASS="newline">\</STRONG>Flash Disk Mass Storage Device
+Bus 001 Device 002: ID 067b:2515 Prolific Technology, Inc. <STRONG CLASS="newline">\</STRONG><BR>&nbsp;&nbsp;<STRONG CLASS="newline">\</STRONG>Flash Disk Embedded Hub
+Bus 001 Device 001: ID 0000:0000  
+Bus 002 Device 001: ID 0000:0000  
+</PRE>
+</DIV>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<TABLE ID="almlanchor1239">
+<TBODY><TR><TD>
+
+<P CLASS="caption"> Tabella <A HREF="a223.htm#almlanchor1239">12.9</A>. Alcune opzioni. </P>
+<DIV CLASS="object">
+<TABLE CLASS="table">
+
+<COLGROUP><COL CLASS="widthpixel616"><COL CLASS="widthpixel998"></COLGROUP>
+
+<THEAD CLASS="border">
+<TR><TD CLASS="border">Sintassi </TD><TD CLASS="border">Descrizione </TD></TR>
+</THEAD>
+<TBODY CLASS="border">
+<TR><TD CLASS="border">
+<PRE>-v
+</PRE>
+
+<PRE>--verbose
+</PRE>
+ </TD><TD CLASS="border">Richiede la visualizzazione di maggiori informazioni. </TD></TR>
+<TR><TD CLASS="border">
+<PRE>-t
+</PRE>
+ </TD><TD CLASS="border">Richiede di mostrare la gerarchia tra i componenti USB in forma di albero. </TD></TR>
+</TBODY>
+</TABLE>
+</DIV>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<P>Viene mostrato un esempio in cui si mette a confronto l&#x0027;uso normale di Lsusb con l&#x0027;aggiunta successiva dell&#x0027;opzione <SAMP>-t</SAMP>:</P>
+
+<P CLASS="command"><CODE>$&#160;</CODE><STRONG><CODE>lsusb</CODE></STRONG><!--INDEXENTRYREMOVE-->[<KBD><!--INDEXENTRYREMOVE-->Invio<!--INDEXENTRYREMOVE--></KBD>]<!--INDEXENTRYREMOVE--></P>
+
+<TABLE ID="almlanchor1240">
+<TBODY><TR><TD>
+<DIV CLASS="object">
+
+<PRE>Bus 001 Device 001: ID 0000:0000  
+Bus 003 Device 001: ID 0000:0000  
+Bus 002 Device 003: ID 04cb:0128 Fuji Photo Film Co., Ltd 
+Bus 002 Device 001: ID 0000:0000  
+</PRE>
+</DIV>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<P CLASS="command"><CODE>$&#160;</CODE><STRONG><CODE>lsusb -t</CODE></STRONG><!--INDEXENTRYREMOVE-->[<KBD><!--INDEXENTRYREMOVE-->Invio<!--INDEXENTRYREMOVE--></KBD>]<!--INDEXENTRYREMOVE--></P>
+
+<TABLE ID="almlanchor1241">
+<TBODY><TR><TD>
+<DIV CLASS="object">
+
+<PRE>Bus#  3
+`-Dev#   1 Vendor 0x0000 Product 0x0000
+Bus#  2
+`-Dev#   1 Vendor 0x0000 Product 0x0000
+  `-Dev#   3 Vendor 0x04cb Product 0x0128
+Bus#  1
+`-Dev#   1 Vendor 0x0000 Product 0x0000
+</PRE>
+</DIV>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<P>Eventualmente, per approfondire l&#x0027;uso del programma si pu&#242; leggere la pagina&#160;di&#160;manuale <EM>lsusb</EM>(8).</P>
+
+<H2>12.4 &nbsp; <SPAN ID="almltitle502"></SPAN><SPAN ID="almlanchor1242"></SPAN>
+ Lshw <SPAN ID="almlindex759"></SPAN> <SPAN ID="almlindex760"></SPAN> </H2>
+
+<P>Lshw<SPAN ID="almlwork56"></SPAN><SUP><A HREF="#almlfootnote4" NAME="almlfootnote-ref4">(4)</A></SUP> &#232; un programma in grado di scandire ed elencare tutti i dispositivi esistenti. Attraverso le opzioni della riga di comando &#232; possibile modificare il modo in cui queste informazioni vengono mostrate; altrimenti non c&#x0027;&#232; bisogno di specificare alcunch&#233;:</P>
+
+<TABLE CLASS="syntax">
+<TBODY><TR><TD>
+
+<PRE>lshw <STRONG CLASS="syn">[</STRONG><VAR>opzioni</VAR><STRONG CLASS="syn">]</STRONG>
+</PRE>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<P>Ecco come potrebbe presentarsi l&#x0027;elenco che si ottiene da questo programma se avviato dall&#x0027;utente <SAMP>root</SAMP>:</P>
+
+<P CLASS="command"><CODE>#&#160;</CODE><STRONG><CODE>lshw</CODE></STRONG><!--INDEXENTRYREMOVE-->[<KBD><!--INDEXENTRYREMOVE-->Invio<!--INDEXENTRYREMOVE--></KBD>]<!--INDEXENTRYREMOVE--></P>
+
+<TABLE ID="almlanchor1243">
+<TBODY><TR><TD>
+<DIV CLASS="object">
+
+<PRE>nanohost
+    description: Computer
+    product: VT82C692BX
+    vendor: VIA Technologies, Inc.
+    capabilities: smbios-2.2 dmi-2.2
+  *-core
+       description: Motherboard
+       product: 693A-596B-977EF
+       physical id: 0
+     *-firmware
+          description: BIOS
+          vendor: Award Software International, Inc.
+          physical id: 0
+          version: 6.00 PG (09/27/2000)
+          size: 128KB
+          capacity: 192KB
+          capabilities: isa pci pnp apm upgrade shadowing escd cdboot <STRONG CLASS="newline">\</STRONG><BR>&nbsp;&nbsp;<STRONG CLASS="newline">\</STRONG>bootselect socketedrom edd int13floppy360 int13floppy1200 int13floppy720 <STRONG CLASS="newline">\</STRONG><BR>&nbsp;&nbsp;<STRONG CLASS="newline">\</STRONG>int13floppy2880 int5printscreen int9keyboard int14serial <STRONG CLASS="newline">\</STRONG><BR>&nbsp;&nbsp;<STRONG CLASS="newline">\</STRONG>int17printer int10video acpi usb agp ls120boot zipboot biosbootspecification
+     *-cpu
+          description: CPU
+          product: Celeron (Coppermine)
+          vendor: Intel Corp.
+          physical id: 4
+          version: 6.8.6
+          slot: Socket 370
+          size: 766MHz
+          clock: 66MHz
+          capabilities: fpu fpu_exception wp vme de pse tsc msr pae <STRONG CLASS="newline">\</STRONG><BR>&nbsp;&nbsp;<STRONG CLASS="newline">\</STRONG>mce cx8 sep mtrr pge mca cmov pat pse36 mmx fxsr sse
+     ...
+     ...
+     ...
+  *-network:5
+       description: Ethernet controller
+       physical id: 6
+       logical name: eth0
+       serial: 00:50:ba:71:d9:c1
+       capabilities: mii autonegotiation 100bt-fd 100bt 10bt-fd 10bt ethernet
+       configuration: autonegociated=100bt broadcast=yes <STRONG CLASS="newline">\</STRONG><BR>&nbsp;&nbsp;<STRONG CLASS="newline">\</STRONG>driver=via-rhine driverversion=1.1.20-2.6 duplex=full <STRONG CLASS="newline">\</STRONG><BR>&nbsp;&nbsp;<STRONG CLASS="newline">\</STRONG>ip=172.21.1.1 link=yes multicast=yes
+</PRE>
+</DIV>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<P>Si osservi che la precisione e il dettaglio delle informazioni si riduce se usato da un utente comune, senza privilegi.</P>
+
+<TABLE ID="almlanchor1244">
+<TBODY><TR><TD>
+
+<P CLASS="caption"> Tabella <A HREF="a223.htm#almlanchor1244">12.13</A>. Alcune opzioni. </P>
+<DIV CLASS="object">
+<TABLE CLASS="table">
+
+<COLGROUP><COL CLASS="widthpixel616"><COL CLASS="widthpixel998"></COLGROUP>
+
+<THEAD CLASS="border">
+<TR><TD CLASS="border">Sintassi </TD><TD CLASS="border">Descrizione </TD></TR>
+</THEAD>
+<TBODY CLASS="border">
+<TR><TD CLASS="border">
+<PRE>-businfo
+</PRE>
+ </TD><TD CLASS="border">Mostra le informazioni, in forma tabellare, partendo dalle coordinate del bus. </TD></TR>
+<TR><TD CLASS="border">
+<PRE>-C <VAR>nome_classe</VAR>
+</PRE>
+
+<PRE>-class <VAR>nome_classe</VAR>
+</PRE>
+ </TD><TD CLASS="border">Mostra le informazioni riferite solo alla classe indicata. I nomi stabiliti per la classi sono quelli che si vedono, per esempio, utilizzando l&#x0027;opzione <SAMP>-businfo</SAMP>. </TD></TR>
+</TBODY>
+</TABLE>
+</DIV>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<P>Segue la descrizione di alcuni esempi.</P>
+
+<UL>
+
+<LI>
+
+<P CLASS="command"><CODE>$&#160;</CODE><STRONG><CODE>lshw -businfo</CODE></STRONG><!--INDEXENTRYREMOVE-->[<KBD><!--INDEXENTRYREMOVE-->Invio<!--INDEXENTRYREMOVE--></KBD>]<!--INDEXENTRYREMOVE--></P>
+
+<TABLE ID="almlanchor1245">
+<TBODY><TR><TD>
+<DIV CLASS="object">
+
+<PRE>Bus info     Device    Class       Description
+==============================================
+                       system      Computer
+                       bus         Motherboard
+                       memory      System memory
+cpu@0                  processor   AMD Sempron(tm) 2800+
+                       memory      L1 cache
+                       memory      L2 cache
+pci@00:00.0            bridge      746 Host
+pci@00:01.0            bridge      SG86C202
+...
+ide@0        ide0      bus         IDE Channel 0
+ide@0.0      /dev/hda  disk        Maxtor 6Y120P0
+...
+usb@2        usb2      bus         OHCI Host Controller
+pci@00:03.2            bus         USB 2.0 Controller
+usb@1        usb1      bus         EHCI Host Controller
+pci@00:04.0  eth0      network     SiS900 PCI Fast Ethernet
+...
+</PRE>
+</DIV>
+
+</TD></TR></TBODY>
+</TABLE>
+</LI>
+
+<LI>
+
+<P CLASS="command"><CODE>$&#160;</CODE><STRONG><CODE>lshw -businfo -class network</CODE></STRONG><!--INDEXENTRYREMOVE-->[<KBD><!--INDEXENTRYREMOVE-->Invio<!--INDEXENTRYREMOVE--></KBD>]<!--INDEXENTRYREMOVE--></P>
+
+<TABLE ID="almlanchor1246">
+<TBODY><TR><TD>
+<DIV CLASS="object">
+
+<PRE>Bus info     Device    Class       Description
+==============================================
+pci@00:04.0  eth0      network     SiS900 PCI Fast Ethernet
+             plip0     network     Ethernet interface
+             dummy0    network     Ethernet interface
+</PRE>
+</DIV>
+
+</TD></TR></TBODY>
+</TABLE>
+</LI>
+</UL>
+
+<P>Per maggiori informazioni sull&#x0027;uso del programma conviene leggere la pagina&#160;di&#160;manuale <EM>lshw</EM>(8).</P>
+
+<H2>12.5 &nbsp; <SPAN ID="almltitle503"></SPAN><SPAN ID="almlanchor1247"></SPAN>
+ Definizione del nome del sistema <SPAN ID="almlindex761"></SPAN> <SPAN ID="almlindex762"></SPAN> <SPAN ID="almlindex763"></SPAN> <SPAN ID="almlindex764"></SPAN> <SPAN ID="almlindex765"></SPAN> <SPAN ID="almlindex766"></SPAN> </H2>
+
+<P>Nella tradizione dei sistemi Unix, il sistema deve avere un nome. Questo nome tende a confondersi con quello attribuito all&#x0027;indirizzo dell&#x0027;interfaccia di rete, se questa esiste; per la precisione si tratta della prima parte, senza il dominio della rete a cui si connette. Tra le altre cose, questo fatto &#232; poi anche motivo di confusione, nel momento in cui si comprende che ci possono essere diverse interfacce di rete, oppure ci possono essere interfacce dinamiche come quelle riferite alle connessioni PPP.</P>
+
+<P>Per un principiante, questa premessa pu&#242; risultare incomprensibile. In effetti, la gestione della rete viene affrontata in un altro volume, per&#242; rimane il fatto che il nome del sistema si attribuisce indipendentemente dalla connessione o meno a una rete, senza nemmeno che ci debba essere necessariamente un&#x0027;armonizzazione tra questo nome e i nomi utilizzati nell&#x0027;ambito della rete.</P>
+
+<P>Il nome del sistema si attribuisce con il comando <SAMP>hostname</SAMP> e generalmente si annota anche all&#x0027;interno della variabile di ambiente <VAR>HOSTNAME</VAR>. L&#x0027;utilizzo di <SAMP>hostname</SAMP><SPAN ID="almlwork57"></SPAN><SUP><A HREF="#almlfootnote5" NAME="almlfootnote-ref5">(5)</A></SUP> &#232; molto semplice:</P>
+
+<TABLE CLASS="syntax">
+<TBODY><TR><TD>
+
+<PRE>hostname <STRONG CLASS="syn">[</STRONG><VAR>nome</VAR><STRONG CLASS="syn">]</STRONG>
+</PRE>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<P>In pratica, se non si indicano argomenti, si ottiene l&#x0027;emissione del nome attuale; al contrario, se si indica un argomento, quello viene memorizzato come il nome del sistema.</P>
+
+<TABLE CLASS="frame">
+<TBODY><TR><TD>
+
+<P>Come si pu&#242; intuire, la lettura del nome &#232; accessibile a tutti gli utenti, mentre l&#x0027;impostazione del nome &#232; consentita solo all&#x0027;utente <SAMP>root</SAMP>.</P>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<P>In generale, l&#x0027;impostazione di questa definizione &#232; compito della procedura&#160;di&#160;inizializzazione&#160;del&#160;sistema, con la quale si dovrebbe definire coerentemente anche la variabile di ambiente <VAR>HOSTNAME</VAR>, in modo che contenga lo stesso nome.</P>
+
+<P>In alcuni sistemi, si utilizza il file <CODE CLASS="file">/etc/hostname</CODE> per annotare questo nome, in modo che venga poi letto e utilizzato per la configurazione all&#x0027;atto dell&#x0027;avvio del sistema stesso.</P>
+
+<H2>12.6 &nbsp; <SPAN ID="almltitle504"></SPAN><SPAN ID="almlanchor1248"></SPAN>
+ Altre caratteristiche identificative del sistema <SPAN ID="almlindex767"></SPAN> <SPAN ID="almlindex768"></SPAN> </H2>
+
+<P>Oltre al nome, un sistema dispone anche di altre informazioni identificative. In particolare si tratta del tipo di architettura hardware, il nome del kernel e la sua versione. Queste informazioni si leggono generalmente attraverso il programma <SAMP>uname</SAMP>:<SPAN ID="almlwork58"></SPAN><SUP><A HREF="#almlfootnote6" NAME="almlfootnote-ref6">(6)</A></SUP> </P>
+
+<TABLE CLASS="syntax">
+<TBODY><TR><TD>
+
+<PRE><SPAN CLASS="posix" TITLE="POSIX">uname <STRONG CLASS="syn">[</STRONG><VAR>opzioni</VAR><STRONG CLASS="syn">]</STRONG></SPAN>
+</PRE>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<P>Il programma <SAMP>uname</SAMP>, usato senza argomenti, fornisce il nome del kernel, mentre con altri argomenti si possono ottenere informazioni differenti. La tabella <A HREF="a223.htm#almlanchor1249">12.16</A> riepiloga brevemente le opzioni relative.</P>
+
+<TABLE ID="almlanchor1249">
+<TBODY><TR><TD>
+
+<P CLASS="caption"> Tabella <A HREF="a223.htm#almlanchor1249">12.16</A>. Opzioni di <SAMP>uname</SAMP>. </P>
+<DIV CLASS="object">
+<TABLE CLASS="table">
+
+<COLGROUP><COL CLASS="widthpixel616"><COL CLASS="widthpixel998"></COLGROUP>
+
+<THEAD CLASS="border">
+<TR><TD CLASS="border">Opzione </TD><TD CLASS="border">Descrizione </TD></TR>
+</THEAD>
+<TBODY CLASS="border">
+<TR><TD CLASS="border">
+<PRE><SPAN CLASS="posix" TITLE="POSIX">-a</SPAN>
+</PRE>
+
+<PRE>--all
+</PRE>
+ </TD><TD CLASS="border">Mostra tutte le informazioni disponibili. </TD></TR>
+<TR><TD CLASS="border">
+<PRE><SPAN CLASS="posix" TITLE="POSIX">-m</SPAN>
+</PRE>
+
+<PRE>--machine
+</PRE>
+ </TD><TD CLASS="border">Mostra il nome dell&#x0027;architettura. </TD></TR>
+<TR><TD CLASS="border">
+<PRE><SPAN CLASS="posix" TITLE="POSIX">-n</SPAN>
+</PRE>
+
+<PRE>--nodename
+</PRE>
+ </TD><TD CLASS="border">Mostra il nome dell&#x0027;elaboratore. </TD></TR>
+<TR><TD CLASS="border">
+<PRE>-o
+</PRE>
+
+<PRE>--operating-system
+</PRE>
+ </TD><TD CLASS="border">Mostra il nome del sistema operativo. </TD></TR>
+<TR><TD CLASS="border">
+<PRE><SPAN CLASS="posix" TITLE="POSIX">-r</SPAN>
+</PRE>
+
+<PRE>--kernel-release
+</PRE>
+ </TD><TD CLASS="border">Mostra la versione del sistema operativo. </TD></TR>
+<TR><TD CLASS="border">
+<PRE><SPAN CLASS="posix" TITLE="POSIX">-v</SPAN>
+</PRE>
+
+<PRE>--kernel-version
+</PRE>
+ </TD><TD CLASS="border">Mostra l&#x0027;edizione del kernel, nell&#x0027;ambito della versione riportata dall&#x0027;opzione <SAMP>-r</SAMP>. </TD></TR>
+<TR><TD CLASS="border">
+<PRE><SPAN CLASS="posix" TITLE="POSIX">-s</SPAN>
+</PRE>
+
+<PRE>--kernel-name
+</PRE>
+ </TD><TD CLASS="border">Mostra il nome del kernel. </TD></TR>
+</TBODY>
+</TABLE>
+</DIV>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<P>Si osservi che l&#x0027;opzione <SAMP>-n</SAMP> serve a visualizzare lo stesso nome che si ottiene e si imposta con <SAMP>hostname</SAMP>.</P>
+
+<H2>12.7 &nbsp; <SPAN ID="almltitle505"></SPAN><SPAN ID="almlanchor1250"></SPAN>
+ Numero di serie <SPAN ID="almlindex769"></SPAN> <SPAN ID="almlindex770"></SPAN> </H2>
+
+<P>Teoricamente, attraverso il programma <SAMP>hostid</SAMP><SPAN ID="almlwork59"></SPAN><SUP><A HREF="#almlfootnote7" NAME="almlfootnote-ref7">(7)</A></SUP> dovrebbe essere possibile ottenere un numero univoco di identificazione dell&#x0027;elaboratore, determinandolo in base ai componenti fisici che questo contiene (di solito il BIOS):</P>
+
+<TABLE CLASS="syntax">
+<TBODY><TR><TD>
+
+<PRE>hostid
+</PRE>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<P>A parte le opzioni minime delle estensioni GNU (<SAMP>--help</SAMP> e <SAMP>--version</SAMP>), questo programma non prevede nulla di standard. Purtroppo, &#232; molto probabile che a elaboratori identici venga attribuito lo stesso numero, rendendo questo programma perfettamente inutile:</P>
+
+<P CLASS="command"><CODE>$&#160;</CODE><STRONG><CODE>hostid</CODE></STRONG><!--INDEXENTRYREMOVE-->[<KBD><!--INDEXENTRYREMOVE-->Invio<!--INDEXENTRYREMOVE--></KBD>]<!--INDEXENTRYREMOVE--></P>
+
+<TABLE ID="almlanchor1251">
+<TBODY><TR><TD>
+<DIV CLASS="object">
+
+<PRE>7f0100
+</PRE>
+</DIV>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<H2>12.8 &nbsp; <SPAN ID="almltitle506"></SPAN><SPAN ID="almlanchor1252"></SPAN>
+ LinuxInfo <SPAN ID="almlindex771"></SPAN> </H2>
+
+<P>LinuxInfo <SPAN ID="almlwork60"></SPAN><SUP><A HREF="#almlfootnote8" NAME="almlfootnote-ref8">(8)</A></SUP> &#232; un programma che si comporta in modo simile a <SAMP>uname</SAMP>, fornendo per&#242; informazioni specifiche di un sistema GNU/Linux:</P>
+
+<TABLE CLASS="syntax">
+<TBODY><TR><TD>
+
+<PRE>linuxinfo <STRONG CLASS="syn">[</STRONG><VAR>opzioni</VAR><STRONG CLASS="syn">]</STRONG>
+</PRE>
+
+</TD></TR></TBODY>
+</TABLE>
+
+<P>Utilizzando <SAMP>linuxinfo</SAMP> senza argomenti, si ottiene un risultato simile a quello dell&#x0027;esempio seguente:</P>
+
+<P CLASS="command"><CODE>$&#160;</CODE><STRONG><CODE>linuxinfo</CODE></STRONG><!--INDEXENTRYREMOVE-->[<KBD><!--INDEXENTRYREMOVE-->Invio<!--INDEXENTRYREMOVE--></KBD>]<!--INDEXENTRYREMOVE--></P>
+
+<TABLE ID="almlanchor1253">
+<TBODY><TR><TD>
+<DIV CLASS="object">
+
+<PRE>Linux nanohost 2.6.7 #1 Fri Aug 13 18:28:48 CEST 2004
+One Intel Unknown 768MHz processor, 1511.42 total <STRONG CLASS="newline">\</STRONG><BR>&nbsp;&nbsp;<STRONG CLASS="newline">\</STRONG>bogomips, 384M RAM
+System library 2.3.2
+</PRE>
+</DIV>
+
+</TD></TR></TBODY>
+</TABLE>
+<HR>
+
+<P><A HREF="#almlfootnote-ref1" NAME="almlfootnote1">1)</A> <A HREF="a2390.htm#almlworkinfo:Procinfo"><STRONG>Procinfo</STRONG></A> &nbsp; GNU&#160;GPL</P>
+
+<P><A HREF="#almlfootnote-ref2" NAME="almlfootnote2">2)</A> <A HREF="a2390.htm#almlworkinfo:Linux PCI utilities"><STRONG>Linux PCI utilities</STRONG></A> &nbsp; GNU&#160;GPL</P>
+
+<P><A HREF="#almlfootnote-ref3" NAME="almlfootnote3">3)</A> <A HREF="a2390.htm#almlworkinfo:USButils"><STRONG>USButils</STRONG></A> &nbsp; GNU&#160;GPL</P>
+
+<P><A HREF="#almlfootnote-ref4" NAME="almlfootnote4">4)</A> <A HREF="a2390.htm#almlworkinfo:Lshw"><STRONG>Lshw</STRONG></A> &nbsp; GNU&#160;GPL</P>
+
+<P><A HREF="#almlfootnote-ref5" NAME="almlfootnote5">5)</A> <A HREF="a2390.htm#almlworkinfo:GNU core utilities"><STRONG>GNU core utilities</STRONG></A> &nbsp; GNU&#160;GPL</P>
+
+<P><A HREF="#almlfootnote-ref6" NAME="almlfootnote6">6)</A> <A HREF="a2390.htm#almlworkinfo:GNU core utilities"><STRONG>GNU core utilities</STRONG></A> &nbsp; GNU&#160;GPL</P>
+
+<P><A HREF="#almlfootnote-ref7" NAME="almlfootnote7">7)</A> <A HREF="a2390.htm#almlworkinfo:GNU core utilities"><STRONG>GNU core utilities</STRONG></A> &nbsp; GNU&#160;GPL</P>
+
+<P><A HREF="#almlfootnote-ref8" NAME="almlfootnote8">8)</A> <A HREF="a2390.htm#almlworkinfo:LinuxInfo"><STRONG>LinuxInfo</STRONG></A> &nbsp; GNU&#160;GPL e GNU LGPL</P>
+<P><SMALL>&#171;<SPAN CLASS="big">a</SPAN>2&#187; 2013.11.11  --- <EM>Copyright &copy; Daniele Giacomini -- appunti2@gmail.com <EM><A HREF="http://informaticalibera.net">http://informaticalibera.net</A></EM></EM></SMALL></P>
+<P CLASS="navlinkright">
+</P>
+</BODY>
+</HTML>
